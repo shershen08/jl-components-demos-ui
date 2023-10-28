@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import { accountStore } from '@juicyllama/frontend-core'
-
+import { useRoute } from 'vue-router'
 onMounted(() => {
   accountStore.setSelectedAccount({
       selected_account: {
@@ -10,7 +10,7 @@ onMounted(() => {
   })
 })
 
-const model = ref('')
+const route = useRoute()
 const options = [{
   title: 'Upload',
   link: '/upload'
@@ -24,6 +24,14 @@ const options = [{
   link: '/chart'
 },
 {
+  title: 'Stats',
+  link: '/stats'
+},
+{
+  title: 'Table',
+  link: '/table'
+},
+{
   title: 'Form',
   link: '/form'
 }]
@@ -34,7 +42,9 @@ const options = [{
     <q-toolbar class="bg-secondary text-white q-my-md shadow-2">
       <q-toolbar-title>JL components</q-toolbar-title>
         <q-space />
-        <q-btn stretch flat v-for="o in options" :label="o.title" :to="o.link"/>
+        <q-btn stretch :color="route.path === o.link ? 'primary' : ''" :disable="route.path === o.link" flat v-for="o in options" :label="o.title" :to="o.link">
+
+        </q-btn>
       </q-toolbar>
     <router-view></router-view>
   </div>

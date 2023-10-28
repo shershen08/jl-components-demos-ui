@@ -96,27 +96,28 @@ const dataForDataMapper = {
   ]
 };
 
-
-
 const ECOMMERCE_TRANSACTIONS_ENDPOINT = 'http://localhost:3000'
 
 </script>
 <template>
 
 <!-- local Bar :) -->
+<div style="height:200px">
   <JLChart
         :data="dataStatic"
         type="bar"
         title="Bar with local 'dataStatic'"
               />
+              </div>
 
 <!-- local line -->
+<div style="height:200px">
               <JLChart
         :data="dataStatic"
         type="line"
         title="Line with local 'dataStatic'"
               />
-
+            </div>
 <!-- local line with dataMapper -->
        <JLChart
         :data="dataForDataMapper"
@@ -124,7 +125,14 @@ const ECOMMERCE_TRANSACTIONS_ENDPOINT = 'http://localhost:3000'
         type="line"
         title="Line with dataMapper"
               />
-
+              <div style="height:200px">
+              <JLChart
+        :data="dataForDataMapper"
+        :dataMapper="dataMapper"
+        type="pie"
+        title="pie with dataMapper"
+              />
+</div>
                <JLChart
         dynamic-data
         :endpoint="`${ECOMMERCE_TRANSACTIONS_ENDPOINT}/charts?from=${date_range.from}&to=${date_range.to}&period=DAY&fields=total_price`"
