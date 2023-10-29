@@ -1,9 +1,28 @@
 <script setup>
 import { JLDropdownButtonMenu } from '@juicyllama/frontend-core'
 
-const button = {
+const buttonRed = {
   color: 'red',
   label: 'Click me',
+}
+
+const button = {
+  label: 'Click me',
+}
+
+const menuFlat = {
+  items: [
+    {
+        caption: 'Item caption',
+        title: 'Item title',
+        link: '/foo/1'
+      },
+      {
+        caption: 'Item 2 caption',
+        title: 'Item 2 title',
+        link: '/foo/2',
+      },
+  ]
 }
 
 const menu = {
@@ -14,8 +33,8 @@ const menu = {
         link: '/foo/1'
       },
       {
-        caption: '#2 caption',
-        title: '#2 title',
+        caption: 'Item 2 caption',
+        title: 'Item 2 title',
         link: '/foo/2',
         icon: 'warning'
       },
@@ -23,8 +42,8 @@ const menu = {
         caption: 'Submenu',
         title: 'Submenu title',
         links: [{
-          caption: 'Item 2',
-          title: 'Item 2',
+          caption: 'Item 3',
+          title: 'Item 3',
           link: '/foo/3'
         }]
       }
@@ -33,5 +52,8 @@ const menu = {
 
 </script>
 <template>
-  <JLDropdownButtonMenu :button="button" :menu="menu"/>
+  Flat menu:<JLDropdownButtonMenu :button="button" :menu="menuFlat"/>
+  <br>
+  <br>
+  2-level menu: <JLDropdownButtonMenu :button="buttonRed" :menu="menu"/>
 </template>

@@ -102,12 +102,35 @@ const ECOMMERCE_TRANSACTIONS_ENDPOINT = 'http://localhost:3000'
 <template>
 
 <!-- local Bar :) -->
+<div class="row">
+    <div class="col-md-4 col-6">
 <div style="height:200px">
   <JLChart
         :data="dataStatic"
         type="bar"
         title="Bar with local 'dataStatic'"
               />
+              </div>
+              </div>
+              <div class="col-md-4 col-6">
+              <code>const dataStatic = {
+  labels: labels,
+  datasets: [
+    {
+      label: 'Dataset 1',
+      data: [10, 20, 30, 40, 50, 60, 70],
+      borderColor: 'red',
+      backgroundColor: 'red',
+    },
+    {
+      label: 'Dataset 2',
+      data: [10, 20, 30, 40, 50, 60, 70].reverse(),
+      borderColor: 'blue',
+      backgroundColor: 'blue',
+    }
+  ]
+};</code>
+              </div>
               </div>
 
 <!-- local line -->
