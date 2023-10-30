@@ -96,6 +96,7 @@ const dataForDataMapper = {
   ]
 };
 
+
 const ECOMMERCE_TRANSACTIONS_ENDPOINT = 'http://localhost:3000'
 
 </script>
@@ -150,10 +151,12 @@ const ECOMMERCE_TRANSACTIONS_ENDPOINT = 'http://localhost:3000'
               />
               <div style="height:200px">
               <JLChart
-        :data="dataForDataMapper"
+        :data="{
+          datasets:[dataForDataMapper.datasets[0]]
+        }"
         :dataMapper="dataMapper"
         type="pie"
-        title="pie with dataMapper"
+        title="pie with dataMapper, single DS"
               />
 </div>
                <JLChart

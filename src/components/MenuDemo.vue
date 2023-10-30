@@ -51,9 +51,11 @@ const menu = {
   }
 
 </script>
+
 <template>
   Flat menu:<JLDropdownButtonMenu :button="button" :menu="menuFlat"/>
   <br>
   <br>
   2-level menu: <JLDropdownButtonMenu :button="buttonRed" :menu="menu"/>
+
 </template>

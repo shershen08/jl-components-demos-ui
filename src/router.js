@@ -14,4 +14,5 @@ export const routes = [
     { path: '/stats', component: Stats },
     { path: '/form', component: Form },
     { path: '/table', component: Table },
+    { path: '/foo/:id', component: MenuDemo },
   ]

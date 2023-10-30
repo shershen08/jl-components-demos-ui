@@ -112,9 +112,9 @@
         <h6> Form data:</h6>
         <code>{{ formInputData.data }}</code>
 
-        <h6>Form events:</h6>
+        <!-- <h6>Form events:</h6>
             <q-icon name="check" color="green"/>submittedForm <br>
-            <q-icon name="check"/>updateFormField <br>
+            <q-icon name="check"/>updateFormField <br> -->
     </div>
 </div>
 </template>

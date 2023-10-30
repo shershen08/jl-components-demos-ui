@@ -46,7 +46,6 @@ const inputWithAPIEndpoint = ref({
         signOnTheLeft: true,
         valueSign: '-'
     }
-}
     </code>
     </div>
 </div>
