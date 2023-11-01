@@ -5,6 +5,7 @@ import ChartDemo from './components/ChartDemo.vue'
 import Stats from './components/StatsDemo.vue'
 import Form from './components/FormDemo.vue'
 import Table from './components/TableDemo.vue'
+import Widgets from './components/WidgetsDemo.vue'
 
 export const routes = [
     { path: '/', component: Home },
@@ -14,5 +15,6 @@ export const routes = [
     { path: '/stats', component: Stats },
     { path: '/form', component: Form },
     { path: '/table', component: Table },
+    { path: '/widgets', component: Widgets },
     { path: '/foo/:id', component: MenuDemo },
   ]

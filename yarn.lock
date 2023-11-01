@@ -19,7 +19,7 @@
 
 "@juicyllama/frontend-core@file:../framework/frontend/core":
   "resolved" "file:../framework/frontend/core"
-  "version" "0.1.15"
+  "version" "0.1.19"
   dependencies:
     "@juicyllama/vue-dev" "workspace:^"
     "@juicyllama/vue-utils" "workspace:^"

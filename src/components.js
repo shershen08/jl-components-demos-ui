@@ -27,4 +27,9 @@ export default [{
     title: 'Form',
     link: '/form',
     caption: 'Configurable user input'
+  },
+  {
+    title: 'Widgets',
+    link: '/widgets',
+    caption: 'DND layout'
   }]

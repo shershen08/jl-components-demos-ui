@@ -38,7 +38,7 @@ const toggleLeftDrawer = () => {
         <q-toolbar-title @click="router.push('/')" class="cursor-pointer">
           JL components
         </q-toolbar-title>
-        <q-spacer />
+        <q-space />
       <q-btn flat no-caps label="v1.0.0"/>
       <q-btn flat no-caps label="GitHub" target="_blank" href="https://github.com/juicyllama/framework" />
       </q-toolbar>

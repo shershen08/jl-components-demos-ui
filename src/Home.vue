@@ -5,8 +5,8 @@ const router = useRouter()
 </script>
 <template>
      <div class="row">
-     <div class="col-6 col-md-4">
-        <q-card flat bordered @click="router.push(c.link)" class="cursor-pointer q-pa-sm my-card" v-for="c in components">
+     <div class="col-6 col-md-4" v-for="c in components">
+        <q-card flat bordered @click="router.push(c.link)" class="cursor-pointer q-ma-sm my-card">
             <q-card-section>
                 <div class="text-h6">{{c.title}}</div>
             </q-card-section>
